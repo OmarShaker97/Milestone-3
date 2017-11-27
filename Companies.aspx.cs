@@ -93,4 +93,48 @@ public partial class Companies : System.Web.UI.Page
     {
 
     }
+
+    protected void EButton_Click(object sender, EventArgs e)
+    {
+        string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
+        SqlConnection conn = new SqlConnection(connStr);
+        SqlCommand cmd = new SqlCommand("View_departments", conn);
+        cmd.CommandType = CommandType.StoredProcedure;
+        string email = DropDownList1.SelectedValue;
+        cmd.Parameters.Add(new SqlParameter("@email", email));
+
+        conn.Open();
+        SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        sqlda.Fill(ds);
+        GridView1.DataSource = ds;
+        GridView1.DataBind();
+        conn.Close();
+    }
+
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btn_code_Click(object sender, EventArgs e)
+    {
+
+            string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
+            SqlConnection conn = new SqlConnection(connStr);
+            SqlCommand cmd = new SqlCommand("View_Jobs", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            string email = DropDownList1.SelectedValue;
+            string code = txt_code.Text;
+            cmd.Parameters.Add(new SqlParameter("@email", email));
+            cmd.Parameters.Add(new SqlParameter("@code", code));
+
+            conn.Open();
+            SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sqlda.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+            conn.Close();
+    }
 }
