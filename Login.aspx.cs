@@ -21,7 +21,6 @@ public partial class _Default : System.Web.UI.Page
 
     protected void LoginBTN_Click(object sender, EventArgs e)
     {
-
         string username = userNameTXT.Text;
         string password = passwordTXT.Text;
         Int32 userType;

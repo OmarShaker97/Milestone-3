@@ -18,16 +18,10 @@ public partial class View : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //myDBConnSTR = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
-        //myDBConn = new SqlConnection(myDBConnSTR);
-    }
-
-    protected void VButton(object sender, EventArgs e)
-    {
         string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
         SqlConnection conn = new SqlConnection(connStr);
 
-        string username = Managername.Text;
+        string username = (string)Session["username"];
 
         SqlCommand cmd = new SqlCommand("MviewRequests", conn);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -41,10 +35,6 @@ public partial class View : System.Web.UI.Page
         GridView1.DataSource = ds;
         GridView1.DataBind();
         conn.Close();
-
-
-
     }
-  
 
 }

@@ -22,7 +22,7 @@ public partial class RemoveEmployee : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand("Remove_Regular_Employees", conn);
         cmd.CommandType = CommandType.StoredProcedure;
 
-        String username = TextBox4.Text;
+        string username = (string)Session["username"];
         String regular_employee = TextBox2.Text;
         String project_name = TextBox3.Text;
 
@@ -33,10 +33,20 @@ public partial class RemoveEmployee : System.Web.UI.Page
         cmd.Parameters.Add(new SqlParameter("@regular_employee", regular_employee));
         cmd.Parameters.Add(new SqlParameter("@project_name", project_name));
 
-
         conn.Open();
-        cmd.ExecuteNonQuery();
+        Int32 count = (Int32) cmd.ExecuteNonQuery();
         conn.Close();
+
+        if (count == 1)
+        {
+            Session["Username"] = username;
+            Response.Write("Passed");
+            //Response.Redirect("Companies", true);
+        }
+        else
+        {
+            Response.Write("Failed");
+        }
     }
 
 

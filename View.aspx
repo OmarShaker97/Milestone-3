@@ -11,11 +11,7 @@
         <div>
             <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
-            <asp:TextBox ID="Managername" runat="server"></asp:TextBox>
         </div>
-        <p>
-            <asp:Button ID="ViewR" runat="server" Text="View Requests" onclick="VButton"/>
-        </p>
     </form>
 </body>
 </html>
