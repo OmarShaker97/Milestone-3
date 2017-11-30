@@ -16,7 +16,11 @@
         <div class="auto-style1">
             <a href="View.aspx">View Requests</a><br />
             <br />
-             <a href="RemoveEmployee.aspx">Remove Regular Employee</a></div>
+             <a href="RemoveEmployee.aspx">Remove Regular Employee</a><br />
+            <br />
+            <a href="Viewapp.aspx">View Application</a><br />
+            <br />
+            <a href="AcceptRej.aspx">Accept / Reject Requests </a></div>
     </form>
 </body>
 </html>

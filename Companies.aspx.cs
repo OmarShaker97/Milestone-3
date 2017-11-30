@@ -14,7 +14,6 @@ public partial class Companies : System.Web.UI.Page
     {
         string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
         SqlConnection conn = new SqlConnection(connStr);
-
         SqlCommand cmd = new SqlCommand("getallCompanies", conn);
         cmd.CommandType = CommandType.StoredProcedure;
 
