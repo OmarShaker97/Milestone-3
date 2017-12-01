@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 457px;
+            height: 769px;
         }
     </style>
 </head>
@@ -20,7 +20,19 @@
             <br />
             <a href="Viewapp.aspx">View Application</a><br />
             <br />
-            <a href="AcceptRej.aspx">Accept / Reject Requests </a></div>
+            <a href="AcceptRej.aspx">Accept / Reject Requests </a>
+            <br />
+            <br />
+            <a href="AcceptRejapp.aspx">Accept / Reject Applications</a><br />
+            <br />
+            <a href="Createproject.aspx">Create New Project<br /></a>
+            <br />
+           <a href="DefineTask.aspx"> Define a Task</a><br />
+            <br />
+           <a href="AssignTask.aspx"> Assign Regular Employee</a><br />
+            <br />
+            <a href="changeReg.aspx"> Change Regular Emplyee</a><br />
+        </div>
     </form>
 </body>
 </html>
