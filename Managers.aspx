@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 769px;
+            height: 1086px;
         }
     </style>
 </head>
@@ -32,6 +32,16 @@
            <a href="AssignTask.aspx"> Assign Regular Employee</a><br />
             <br />
             <a href="changeReg.aspx"> Change Regular Emplyee</a><br />
+            <br />
+            <a href="ReviewTasks.aspx"> Review Tasks</a><br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" />
         </div>
     </form>
 </body>
