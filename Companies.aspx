@@ -24,10 +24,9 @@
             </asp:GridView>
             __________________________________________________________________________________________________________________________________________________________<br />
             If you&#39;re interested in viewing information of a specific company, select the company&#39;s email from the list below:<br />
-            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" width="200px" DataSourceID="DDLDataSource" DataTextField="email" DataValueField="email">
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" width="200px"  DataTextField="email" DataValueField="email">
             </asp:DropDownList>
             <asp:Button ID="EButton" runat="server" OnClick="EButton_Click" Text="Go" />
-            <asp:SqlDataSource ID="DDLDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DBProjectFinal2ConnectionString %>" SelectCommand="SELECT [email] FROM [Companies]"></asp:SqlDataSource>
             <br />
             <br />
             Enter the code of the department you wish to view, along with the company email in the drop down list above:<br />

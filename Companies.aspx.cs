@@ -26,6 +26,21 @@ public partial class Companies : System.Web.UI.Page
 
         conn.Close();
 
+        conn.Open();
+
+        string query = "select email from Companies";
+
+        cmd = new SqlCommand(query, conn);
+        SqlDataReader dr = cmd.ExecuteReader();
+
+        if (dr.HasRows)
+        {
+            while (dr.Read())
+            {
+                DropDownList1.Items.Add(dr[0].ToString());
+            }
+        }
+
     }
 
     protected void SButton(object sender, EventArgs e)
