@@ -18,8 +18,7 @@ public partial class ApplyForJob : System.Web.UI.Page
         ApplyQuestions.Visible = false;
         string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
         SqlConnection conn = new SqlConnection(connStr);
-        string query = "select * from Jobs";
-        SqlCommand cmd = new SqlCommand(query, conn);
+        SqlCommand cmd = new SqlCommand("Get_Jobs", conn);
 
         conn.Open();
         SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
@@ -50,10 +49,8 @@ public partial class ApplyForJob : System.Web.UI.Page
         cmd.Parameters.Add(new SqlParameter("@email", email));
 
 
-        try
-        {
             myDBConn.Open();
-            count = (int)cmd.ExecuteScalar();
+            count = cmd.ExecuteNonQuery();
             myDBConn.Close();
 
             if (count == 1)
@@ -62,12 +59,8 @@ public partial class ApplyForJob : System.Web.UI.Page
             }
             else
             {
-                Response.Write("Failed. ");
+                Response.Write("Failed. You may have applied to this job before, and your application is still pending or you do not have enough years of experience for this job. Please try later at another time.");
             }
-        }
-        catch {
-            Response.Write("You may have applied to this job before, and your application is still pending or you do not have enough years of experience for this job. Please try later at another time.");
-        }
    
     }
 
@@ -78,8 +71,7 @@ public partial class ApplyForJob : System.Web.UI.Page
         ApplyQuestions.Visible = false;
         string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
         SqlConnection conn = new SqlConnection(connStr);
-        string query = "select * from Jobs";
-        SqlCommand cmd = new SqlCommand(query, conn);
+        SqlCommand cmd = new SqlCommand("Get_Jobs", conn);
 
         conn.Open();
         SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
@@ -160,18 +152,18 @@ public partial class ApplyForJob : System.Web.UI.Page
             var NoChkBox = (CheckBox)row.FindControl("No");
 
 
-          //  if (YesChkBox.Checked && !(NoChkBox.Checked)) {
-           //     if (Answers.ElementAt(count) == true) {
-            //        score += 20;
-           //             }
-//}
+           if (YesChkBox.Checked && !(NoChkBox.Checked)) {
+               if (Answers.ElementAt(count) == true) {
+                  score += 20;
+                     }
+}
 
-           // if (!(YesChkBox.Checked) && NoChkBox.Checked) {
-            //    if (Answers.ElementAt(count) == false)
-             //   {
+           if (!(YesChkBox.Checked) && NoChkBox.Checked) {
+              if (Answers.ElementAt(count) == false)
+              {
                     score += 20;
-            //    }
-          //  }
+              }
+           }
 
             count++;
         }

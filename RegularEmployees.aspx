@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="JobSeekers.aspx.cs" Inherits="JobSeekers" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RegularEmployees.aspx.cs" Inherits="RegularEmployees" %>
 
 <!DOCTYPE html>
 
@@ -8,20 +8,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 312px">
+    <div>
     
         <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Label"></asp:Label>
         <br />
         <asp:Label ID="Label2" runat="server" Text="What would you like to do today?"></asp:Label>
         <br />
         <br />
-        <a href="ApplyForJob.aspx">Apply for a Job</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="ViewJobsStatus.aspx">View Jobs Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="ChooseAJob.aspx">Choose a Job</a><br />
+
+        <a href="ViewProjects.aspx">View Projects</a>
         <br />
         <br />
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
+    
     </div>
     </form>
 </body>

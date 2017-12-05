@@ -151,4 +151,20 @@ public partial class Companies : System.Web.UI.Page
             GridView1.DataBind();
             conn.Close();
     }
+
+    protected void btn_avgsalary_Click(object sender, EventArgs e)
+    {
+        string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
+        SqlConnection conn = new SqlConnection(connStr);
+        SqlCommand cmd = new SqlCommand("View_Highest_AVG_Companies ", conn);
+        cmd.CommandType = CommandType.StoredProcedure;
+
+        conn.Open();
+        SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        sqlda.Fill(ds);
+        GridView1.DataSource = ds;
+        GridView1.DataBind();
+        conn.Close();
+    }
 }

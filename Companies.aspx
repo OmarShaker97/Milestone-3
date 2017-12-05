@@ -9,6 +9,8 @@
 <body background="spiration.png">
     <form id="form1" runat="server">
         <div style="height: 615px">
+            <a href="Login.aspx">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Register</a><br />
+            <br />
             <asp:Label ID="Label1" runat="server" Text="Name: "></asp:Label>
             <asp:TextBox ID="txt_name" runat="server"></asp:TextBox>
              <asp:Button ID="btn_name" runat="server" Text="Search by Name" onclick="SButton"/>
@@ -33,6 +35,9 @@
             <asp:TextBox ID="txt_code" runat="server"></asp:TextBox>
             <asp:Button ID="btn_code" runat="server" OnClick="btn_code_Click" Text="Go" />
             <br />
+            <br />
+            Sort companies in order of having the highest average salaries<br />
+            <asp:Button ID="btn_avgsalary" runat="server" OnClick="btn_avgsalary_Click" Text="Sort" />
         </div>
     </form>
 </body>
