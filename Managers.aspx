@@ -36,6 +36,7 @@
             <a href="ReviewTasks.aspx"> Review Tasks</a><br />
             <br />
             <br />
+            <a href="StaffMembers.aspx">Staff Members Page</a>
             <br />
             <br />
             <br />

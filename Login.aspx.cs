@@ -42,16 +42,16 @@ public partial class _Default : System.Web.UI.Page
             {
                 Session["username"] = username;
                 if (userType == 1)
-                    Response.Redirect("JobSeekers.aspx");
+                     Response.Redirect("RegularEmployees.aspx");
 
                 else if (userType == 2)
                     Response.Redirect("HREmployees.aspx");
 
                 else if (userType == 3)
-                    Response.Redirect("RegularEmployees.aspx");
+                    Response.Redirect("Managers.aspx");
 
                 else if (userType == 4)
-                    Response.Redirect("Managers.aspx");
+                    Response.Redirect("JobSeekers.aspx");
             }
             else
                 loginValidationLbl.Text = "Wrong Username/Password";

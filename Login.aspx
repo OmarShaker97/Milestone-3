@@ -4,20 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="Login.css">
     <title></title>
     
 </head>
 <body background="spiration.png">
     <form id="form1" runat="server">
-    <div class="auto-style1">
+    <div class="login">
     
-        <asp:Label ID="userNameLBL" runat="server" Text="Username"></asp:Label>
-        <asp:TextBox ID="userNameTXT" runat="server"></asp:TextBox>
+        <asp:TextBox ID="userNameTXT" runat="server" placeholder="Username"></asp:TextBox>
     
                             <br />
-        <asp:Label ID="passwordLBL" runat="server" Text="Password"></asp:Label>
-    
-        <asp:TextBox ID="passwordTXT" runat="server" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="passwordTXT" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
         <asp:Label ID="loginValidationLbl" runat="server"></asp:Label>
                 <br />
         <asp:Button ID="LoginBTN" runat="server" style="height: 26px" Text="Login" 
