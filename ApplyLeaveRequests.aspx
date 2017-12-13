@@ -4,22 +4,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Apply Leave Requests</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
 
-            Start date:
-            <asp:TextBox ID="txt_startdate" runat="server"></asp:TextBox>
             <br />
-            End date: <asp:TextBox ID="txt_enddate" runat="server"></asp:TextBox>
-            <br />
-            Type:
-            <asp:TextBox ID="txt_type" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Apply" />
+            <table style="width:100%;">
+                <tr>
+                    <td>
+
+            <asp:TextBox ID="txt_startdate" runat="server" placeholder="Start Date" CssClass="search-box"></asp:TextBox>
+                    </td>
+                    <td>
+            <asp:TextBox ID="txt_enddate" runat="server" placeholder="End Date" CssClass="search-box"></asp:TextBox>
+                    </td>
+                    <td>
+            <asp:TextBox ID="txt_type" runat="server" placeholder="Type" CssClass="search-box"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Apply" CssClass="myButt" />
+
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
 
         </div>
     </form>

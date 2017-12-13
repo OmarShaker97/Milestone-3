@@ -37,6 +37,8 @@
             <br />
             <br />
             <a href="StaffMembers.aspx">Staff Members Page</a>
+
+            <a href="Companies.aspx">Logout</a>
             <br />
             <br />
             <br />

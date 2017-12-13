@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" type="text/css" href="Companies.css">
-    <title></title>
+    <title>View Job Status</title>
 </head>
 <body>
     <form id="form1" runat="server">

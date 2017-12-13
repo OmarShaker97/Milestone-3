@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Regular Employee Homepage</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -15,16 +16,17 @@
         <asp:Label ID="Label2" runat="server" Text="What would you like to do today?"></asp:Label>
         <br />
         <br />
-
+        <div><ul class="auto-style5">
         <a href="ViewProjects.aspx">View Projects</a>
         <br />
         <a href="StaffMembers.aspx">Staff Member Page</a>
         <br />
+            </ul></div>
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
     
         <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" CssClass="myButt" />
     
     </div>
     </form>

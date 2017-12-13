@@ -4,26 +4,41 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Apply for Business Requests</title>
 </head>
 <body>
     <form id="form2" runat="server">
         <div>
+            <br />
+            <table style="width:100%;">
+                <tr>
+                    <td>
+            <asp:TextBox ID="txt_startdate" runat="server" CssClass="search-box" placeholder="Start Date" OnTextChanged="txt_startdate_TextChanged"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:TextBox ID="txt_enddate" runat="server" CssClass="search-box" placeholder="End Date"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+            <asp:TextBox ID="txt_destination" runat="server" CssClass="search-box" placeholder="Destination"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:TextBox ID="txt_purpose" runat="server" placeholder="Purpose" CssClass="search-box"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Apply" class="myButt"/>
 
-            Start date:
-            <asp:TextBox ID="txt_startdate" runat="server"></asp:TextBox>
-            <br />
-            End date:
-            <asp:TextBox ID="txt_enddate" runat="server"></asp:TextBox>
-            <br />
-            Destination:
-            <asp:TextBox ID="txt_destination" runat="server"></asp:TextBox>
-            <br />
-            Purpose:
-            <asp:TextBox ID="txt_purpose" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Apply" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
 
         </div>
     </form>

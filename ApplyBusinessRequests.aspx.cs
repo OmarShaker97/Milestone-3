@@ -48,4 +48,9 @@ public partial class ApplyBusinessRequests : System.Web.UI.Page
             Response.Write("Failed. This might be because you exceeded the number of annual leaves allowed. Make sure that date format is correct.  You also can not apply for a request when its applied period overlaps with another request you applied for before.");
         }
     }
+
+    protected void txt_startdate_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
