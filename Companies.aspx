@@ -5,11 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>iWork</title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 781px;
+        }
+    </style>
 </head>
 <body background="spiration.png">
     <form id="form1" runat="server">
-        <div style="height: 615px">
-            <a href="Login.aspx">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Register</a><br />
+        <div class="auto-style1">
+            <a href="Login.aspx">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Register</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ViewJobsCompanies.aspx">View Jobs</a>
             <br />
             <asp:Label ID="Label1" runat="server" Text="Name: "></asp:Label>
             <asp:TextBox ID="txt_name" runat="server"></asp:TextBox>
@@ -38,6 +43,12 @@
             <br />
             Sort companies in order of having the highest average salaries<br />
             <asp:Button ID="btn_avgsalary" runat="server" OnClick="btn_avgsalary_Click" Text="Sort" />
+            <br />
+            <br />
+            <asp:Label ID="Label4" runat="server" Text="Order by type"></asp:Label>
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Order" />
+            <br />
         </div>
     </form>
 </body>

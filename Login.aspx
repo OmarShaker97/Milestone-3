@@ -8,7 +8,7 @@
     <title></title>
     
 </head>
-<body background="spiration.png">
+<body background="spiration.png" >
     <form id="form1" runat="server">
     <div class="login">
     
@@ -23,7 +23,7 @@
     
                 <br />
         <br />
-        Not registered? Click <a href="Register.aspx">here</a> to register<br />
+        <font color="white">Not registered? Click <a href="Register.aspx">here</a> to register<br /></font>
         
     
     </div>

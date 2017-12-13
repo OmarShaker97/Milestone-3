@@ -167,4 +167,20 @@ public partial class Companies : System.Web.UI.Page
         GridView1.DataBind();
         conn.Close();
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        string connStr = ConfigurationManager.ConnectionStrings["MyDbConn"].ToString();
+        SqlConnection conn = new SqlConnection(connStr);
+        SqlCommand cmd = new SqlCommand("orderbytype", conn);
+        cmd.CommandType = CommandType.StoredProcedure;
+
+        conn.Open();
+        SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        sqlda.Fill(ds);
+        GridView1.DataSource = ds;
+        GridView1.DataBind();
+        conn.Close();
+    }
 }
