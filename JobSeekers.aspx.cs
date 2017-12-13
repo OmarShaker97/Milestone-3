@@ -31,4 +31,9 @@ public partial class JobSeekers : System.Web.UI.Page
         string backMsg = "Welcome back, " + username;
         Label1.Text = backMsg;
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("update.aspx");
+    }
 }
