@@ -11,15 +11,16 @@
 <body background="spiration.png" >
     <form id="form1" runat="server">
     <div class="login">
-    
+        <h1>Login</h1>
+    <form method="post">
         <asp:TextBox ID="userNameTXT" runat="server" placeholder="Username"></asp:TextBox>
     
                             <br />
         <asp:TextBox ID="passwordTXT" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
         <asp:Label ID="loginValidationLbl" runat="server"></asp:Label>
                 <br />
-        <asp:Button ID="LoginBTN" runat="server" style="height: 26px" Text="Login" 
-                        onclick="LoginBTN_Click" />
+        <asp:Button ID="LoginBTN" runat="server" style="height: 32px" Text="Let me in." 
+                        onclick="LoginBTN_Click"  class="btn btn-primary btn-block btn-large"/>
     
                 <br />
         <br />
@@ -27,6 +28,7 @@
         
     
     </div>
+        </form>
     </form>
 </body>
 </html>
