@@ -4,26 +4,70 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Apply For Job</title>
+    <style type="text/css">
+        .auto-style1 {
+            outline: none;
+            color: white;
+            border: none;
+            padding: 10px;
+            display: block;
+            margin: 10px auto;
+            cursor: pointer;
+            font-size: 11px;
+            background-color: transparent;
+            position: relative;
+            border: 2px solid #fff;
+@includetransition(all 0.5s ease);
+            left: 0px;
+            top: 0px;
+        }
+        .auto-style2 {
+            position: relative;
+            width: 100%;
+            outline-width: 0;
+            outline-style: none;
+            outline-color: invert;
+            border-radius: 15px;
+            left: 0px;
+            top: 0px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
-        <asp:Label ID="Label1" runat="server" Text="Job Title: "></asp:Label>
-        <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Department Code: "></asp:Label>
-        <asp:TextBox ID="txtCode" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Company Email: "></asp:Label>
-        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnViewJobs" runat="server" OnClick="btnViewJobs_Click" Text="View Jobs" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnViewQuestions" runat="server" OnClick="btnViewQuestions_Click" Text="View Questions" />
+        <table style="width:100%;">
+            <tr>
+                <td>
+        <asp:TextBox ID="txtEmail" runat="server" placeholder="Company Email" CssClass="auto-style2"></asp:TextBox>
+                </td>
+                <td>
+        <asp:TextBox ID="txtCode" runat="server" placeholder="Department Code" CssClass="auto-style2"></asp:TextBox>
+                </td>
+                <td>
+        <asp:TextBox ID="txtTitle" runat="server" placeholder="Job Title" CssClass="search-box"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <asp:Button ID="btnApply" runat="server" OnClick="btnApply_Click" Text="Apply" CssClass="myButt" />
+                </td>
+                <td>
+        <asp:Button ID="btnViewJobs" runat="server" OnClick="btnViewJobs_Click" Text="View Jobs" CssClass="auto-style1" />
+                </td>
+                <td>
+        <asp:Button ID="btnViewQuestions" runat="server" OnClick="btnViewQuestions_Click" Text="View Questions" CssClass="auto-style1" />
+                </td>
+            </tr>
+            
+        </table>
         <br />
-        <asp:Button ID="btnApply" runat="server" OnClick="btnApply_Click" Text="Apply" />
         <br />
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
@@ -49,7 +93,7 @@ CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"
                 </Columns>
         </asp:GridView>    
         <br />
-        <asp:Button ID="ApplyQuestions" runat="server" OnClick="ApplyQuestions_Click" Text="Go" />
+        <asp:Button ID="ApplyQuestions" runat="server" OnClick="ApplyQuestions_Click" Text="Go" class="myButt"/>
     </div>
     </form>
 </body>

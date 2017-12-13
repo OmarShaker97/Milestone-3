@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" type="text/css" href="Login.css">
-    <title></title>
+    <title>Login</title>
     
 </head>
 <body background="spiration.png" >
@@ -20,7 +20,7 @@
         <asp:Label ID="loginValidationLbl" runat="server"></asp:Label>
                 <br />
         <asp:Button ID="LoginBTN" runat="server" style="height: 32px" Text="Let me in." 
-                        onclick="LoginBTN_Click"  class="btn btn-primary btn-block btn-large"/>
+                        onclick="LoginBTN_Click"  Cssclass="btn btn-primary btn-block btn-large"/>
     
                 <br />
         <br />

@@ -4,68 +4,40 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="update.css">
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            height: 1130px;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
-        <div class="auto-style1">
-        &nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="login">
+            <h1>Update</h1>
+            <form method="post">
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="Password"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Text="password"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged" placeholder="Personal Email"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label3" runat="server" Text="personal_email"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" placeholder="Date of Birth"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label4" runat="server" Text="birthdate"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox5" runat="server" placeholder="Years of Experience"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label5" runat="server" Text="years of experience"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox6" runat="server" placeholder="First Name"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label6" runat="server" Text="first name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox7" runat="server" placeholder="Middle Name"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label7" runat="server" Text="middle name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label8" runat="server" Text="last name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-            <br />
+            <asp:TextBox ID="TextBox8" runat="server" placeholder="Last Name"></asp:TextBox>
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" />
+                </form>
         </div>
     </form>
 </body>

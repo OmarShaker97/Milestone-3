@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="Companies.css">
     <title></title>
 </head>
 <body>
@@ -15,16 +16,30 @@
     
         <br />
         <asp:Label ID="Label3" runat="server" Text="Delete Job Application"></asp:Label>
+        <table style="width:100%;">
+            <tr>
+                <td>
+        <asp:TextBox ID="txt_title" runat="server" CssClass="search-box" placeholder="Job Title"></asp:TextBox>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+        <asp:TextBox ID="txt_email" runat="server" CssClass="search-box" placeholder="Company Email"></asp:TextBox>
+                </td>
+                <td>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Delete" class="myButt"/>
+    
+                </td>
+            </tr>
+          
+        </table>
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Title: "></asp:Label>
-        <asp:TextBox ID="txt_title" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="Label2" runat="server" Text="Email: "></asp:Label>
-        <asp:TextBox ID="txt_email" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Delete" />
+        <br />
     
     </div>
     </form>
