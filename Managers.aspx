@@ -48,7 +48,8 @@
            
             <a href="StaffMembers.aspx">Staff Members Page</a>
 
-            <a href="Companies.aspx">Logout</a>
+            <a href="JobSeekers.aspx">Search for a job</a>
+             <a href="Companies.aspx">Logout</a>
             
                 </ul></div>
         <br />

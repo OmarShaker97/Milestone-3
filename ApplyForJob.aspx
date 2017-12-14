@@ -40,6 +40,13 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <div><ul class="auto-style5">
+        <a href="JobSeekers.aspx">Home</a>
+        <a href="ApplyForJob.aspx">Apply for a Job</a>
+        <a href="ViewJobsStatus.aspx">View Jobs Status</a>
+        <a href="ChooseAJob.aspx">Choose a Job</a><br />
+        <a href="Companies.aspx">Logout</a>
+            </ul></div>
         <br />
         <br />
         <table style="width:100%;">

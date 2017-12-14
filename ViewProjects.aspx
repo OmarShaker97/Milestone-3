@@ -56,6 +56,13 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <a href="RegularEmployees.aspx">Home</a>
+        <a href="ViewProjects.aspx">View Projects</a>
+        <br />
+        <a href="StaffMembers.aspx">Staff Member Page</a>
+        <a href="Companies.aspx">Logout</a>
+        <br />
+            </ul></div>
     
         <br />
         <table style="width:100%;">

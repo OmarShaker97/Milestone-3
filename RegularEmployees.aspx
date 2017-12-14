@@ -20,6 +20,9 @@
         <a href="ViewProjects.aspx">View Projects</a>
         <br />
         <a href="StaffMembers.aspx">Staff Member Page</a>
+
+            <a href="JobSeekers.aspx">Search for a job</a>
+        <a href="Companies.aspx">Logout</a>
         <br />
             </ul></div>
         <asp:GridView ID="GridView1" runat="server">
