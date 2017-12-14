@@ -4,29 +4,44 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Accept/Reject Applications</title>
 </head>
 <body style="height: 564px">
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Title"></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            
             <br />
-            <br />
-            <asp:Label ID="Label2" runat="server" Text="applicant"></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server" ></asp:TextBox>
-            <br />
-            <br />
-            <asp:Label ID="Label3" runat="server" Text="response: "></asp:Label>
+            <table style="width:100%;">
+                <tr>
+                    <td>
+            
+            <asp:TextBox ID="TextBox1" runat="server" placeholder="Job Title" CssClass="search-box"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="Applicant" CssClass="search-box" ></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:Label ID="Label3" runat="server" Text="Response " Font-Size="Large"></asp:Label>
             <asp:DropDownList ID="DropDownList1" runat="server">
                 <asp:ListItem Value="accepted">Accept</asp:ListItem>
                 <asp:ListItem Value="rejected">Reject</asp:ListItem>
             </asp:DropDownList>
-            <br />
-            <br />
-            <br />
-            <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Go" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Go" CssClass="myButt" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
             <br />
             <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>

@@ -4,37 +4,64 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Review Tasks</title>
+    <style type="text/css">
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            outline-width: 0;
+            outline-style: none;
+            outline-color: invert;
+            border-radius: 15px;
+            left: 0px;
+            top: 0px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body style="height: 1082px">
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:Label ID="Label1" runat="server" Text="Task name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Project name"></asp:Label>
-&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         <br />
-            <asp:Label ID="Label3" runat="server" Text="response: "></asp:Label>
+        <table style="width:100%;">
+            <tr>
+                <td>
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style1" placeholder="Task Name"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+        <asp:TextBox ID="TextBox2" runat="server" placeholder="Project Name" CssClass="search-box"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+            <asp:Label ID="Label3" runat="server" Text="Response " Font-Size="Large"></asp:Label>
             <asp:DropDownList ID="DropDownList1" runat="server">
                 <asp:ListItem Value="accepted">Accept</asp:ListItem>
                 <asp:ListItem Value="rejected">Reject</asp:ListItem>
             </asp:DropDownList>
-            <br />
-        <asp:Label ID="Label4" runat="server" Text="Deadline"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <br />
+                </td>
+                <td>&nbsp;</td>
+                <td>
+        <asp:TextBox ID="TextBox3" runat="server" placeholder="Deadline" CssClass="search-box"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" class="myButt"/>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
         <br />
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="update" />
         <br />
     </form>
 </body>

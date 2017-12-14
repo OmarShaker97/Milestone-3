@@ -4,28 +4,37 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            height: 519px;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Change Regular Employee</title>
+    </head>
 <body style="height: 673px">
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Task name"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox1" runat="server" Height="16px"></asp:TextBox>
-        </div>
-        <asp:Label ID="Label2" runat="server" Text="Project name"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="Label3" runat="server" Text="New Regular employee"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br />
-&nbsp;<p>
-            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" />
-        </p>
+&nbsp;</div>
+&nbsp;<table style="width:100%;">
+            <tr>
+                <td><asp:TextBox ID="TextBox1" runat="server" placeholder="Task Name" CssClass="search-box"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td><asp:TextBox ID="TextBox2" runat="server" placeholder="Project Name" CssClass="search-box"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><asp:TextBox ID="TextBox3" runat="server" placeholder="New Regular Employee" CssClass="search-box"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" class="myButt"/>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <p>
+            rr</p>
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
     </form>

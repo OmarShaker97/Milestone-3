@@ -4,25 +4,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Create Project</title>
 </head>
 <body style="height: 729px">
     <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="name"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox1" runat="server" Height="16px"></asp:TextBox>
-        </div>
-        <asp:Label ID="Label2" runat="server" Text="email"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="Label3" runat="server" Text="start_date"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="Label4" runat="server" Text="end_date"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-        <p>
-            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" />
-        </p>
+        <table style="width:100%;">
+            <tr>
+                <td><asp:TextBox ID="TextBox1" runat="server" Height="16px" placeholder="Project Name" CssClass="search-box"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td><asp:TextBox ID="TextBox2" runat="server" placeholder="Company Email" CssClass="search-box" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td><asp:TextBox ID="TextBox3" runat="server" placeholder="Start Date" CssClass="search-box"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td><asp:TextBox ID="TextBox4" runat="server" placeholder="End Date" CssClass="search-box"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" class="myButt"/>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
     </form>

@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Remove Regular Employees</title>
     <style type="text/css">
         .auto-style1 {
             height: 265px;
@@ -14,11 +15,27 @@
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1">
-            Regular Employee: <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
-            Project Name: <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="button1" runat="server" Text="Delete RegularEmployee"  OnClick="Delete_Employee"/>
+            <table style="width:100%;">
+                <tr>
+                    <td>
+            <asp:TextBox ID="TextBox2" runat="server" placeholder="Regular Employee" CssClass="search-box"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:TextBox ID="TextBox3" runat="server" placeholder="Project Name" CssClass="search-box"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+            <asp:Button ID="button1" runat="server" Text="Delete RegularEmployee"  OnClick="Delete_Employee" CssClass="myButt"/>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+               
+            </table>
         </div>
     </form>
 </body>

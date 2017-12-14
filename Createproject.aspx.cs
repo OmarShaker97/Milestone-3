@@ -71,4 +71,9 @@ public partial class _Default : System.Web.UI.Page
 
         conn.Close();
     }
+
+    protected void TextBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

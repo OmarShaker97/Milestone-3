@@ -4,23 +4,52 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="Companies.css">
+    <title>Assign Task</title>
+    <style type="text/css">
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            outline-width: 0;
+            outline-style: none;
+            outline-color: invert;
+            border-radius: 15px;
+            left: 0px;
+            top: 0px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body style="height: 699px">
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Task name"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox1" runat="server" Height="16px"></asp:TextBox>
-        </div>
-        <asp:Label ID="Label2" runat="server" Text="Project name"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="Label3" runat="server" Text="Regular employee"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br />
-&nbsp;<p>
-            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" />
-        </p>
+            
+&nbsp;</div>
+&nbsp;<table style="width:100%;">
+            <tr>
+                <td><asp:TextBox ID="TextBox1" runat="server" placeholder="Task Name" CssClass="auto-style1"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td><asp:TextBox ID="TextBox2" runat="server" placeholder="Project Name" CssClass="search-box"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><asp:TextBox ID="TextBox3" runat="server" placeholder="Regular Employee" CssClass="search-box"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" class="myButt"/>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <p>
+            &nbsp;</p>
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
     </form>
